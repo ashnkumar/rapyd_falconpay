@@ -10,6 +10,7 @@ const IP_KEY = process.env.IP_KEY
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get("/get-ip-key", async (req, res) => {
   return res.json({ipKey: IP_KEY})
@@ -103,6 +104,11 @@ app.post("/create-va", async (req, res) => {
   })
 })
 
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
+
