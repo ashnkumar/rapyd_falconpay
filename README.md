@@ -1,6 +1,8 @@
 ## Overview
 Launch Pay is an app built on top of Rapyd's Virtual Accounts that lets Rapyd merchants get a single link to send to their customers -- regardless of where they're located -- and dynamically generate Virtual Accounts on their behalf in local currencies, using the IP address of the customer.
 
+![Demo](https://i.imgur.com/2owr3X2.gif)
+
 ## How it works:
 1. A space tourism company -- or any company! -- can put in a few details of a large purchase like the total price in the company's home currency (e.g. USD if they're based in the US).
 2. Launch Pay will provide a **one-time web link** that they can use to share with their customer (e.g. the tourist booking the space tour). This can be shared over email, text, on a website or anywhere else!
